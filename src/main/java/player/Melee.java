@@ -1,6 +1,9 @@
 package player;
 
 import Weapons.Weapon;
+import inventory.Item;
+
+import java.util.ArrayList;
 
 public class Melee extends Player {
 
@@ -10,7 +13,8 @@ public class Melee extends Player {
 
     public int armour;
 
-    public Melee(int strength, Weapon weapon, int armour) {
+    public Melee(String name, int health, ArrayList<Item> inventory, int level, int strength, Weapon weapon, int armour) {
+        super(name, health, inventory, level);
         this.strength = strength;
         this.weapon = weapon;
         this.armour = armour;
@@ -26,5 +30,9 @@ public class Melee extends Player {
 
     public int getArmour() {
         return armour;
+    }
+
+    public void setWeapon(Weapon weapon) {
+        this.weapon = weapon;
     }
 }
