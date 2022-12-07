@@ -41,8 +41,7 @@ public class Melee extends Player implements IAttack, IDefend {
     public void attack(IDefend defender) {
         defender.takeDamage(this.weapon.getDamage());
     }
-
     public int takeDamage(int damage) {
-        return 0;
+        return health -= damage;
     }
 }

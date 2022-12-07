@@ -65,14 +65,22 @@ public class MeleeTest {
         melee.setWeapon(axe);
         assertEquals(axe, melee.getWeapon());
     }
+    @Test
+    public void playerHasArmour() {
+        assertEquals(100, melee.getArmour());
+    }
 
     @Test
     public void playerCanAttack() {
         melee.attack(monster);
         assertEquals(130, monster.getHealth());
     }
+
     @Test
-    public void playerHasArmour() {
-        assertEquals(100, melee.getArmour());
+    public void playerCanTakeDamage() {
+        melee.takeDamage(monster.getAttackStrength());
+        assertEquals(75, melee.getHealth());
     }
+
+
 }

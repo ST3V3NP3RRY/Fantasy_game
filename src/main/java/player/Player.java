@@ -8,7 +8,7 @@ public abstract class Player {
 
     private String name;
 
-    private int health;
+    protected int health;
 
     private ArrayList<Item> inventory;
 

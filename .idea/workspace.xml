@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="619a671d-79b9-437d-89ae-898d18b3f710" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/behaviours/IAttack.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/behaviours/IDefend.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/MonsterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/monster/Monster.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/monster/Monster.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/player/Melee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/player/Melee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/MeleeTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/MeleeTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/player/Melee.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/player/Melee.class" afterDir="false" />
