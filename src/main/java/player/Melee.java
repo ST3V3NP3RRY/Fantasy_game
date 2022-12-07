@@ -1,6 +1,6 @@
 package player;
 
-import Weapons.Weapon;
+import weapons.Weapon;
 import inventory.Item;
 
 import java.util.ArrayList;

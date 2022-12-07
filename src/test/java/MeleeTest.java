@@ -1,8 +1,9 @@
-import Weapons.Weapon;
+
+import player.Melee;
+import weapons.Weapon;
 import inventory.Item;
 import org.junit.Before;
 import org.junit.Test;
-import player.Melee;
 
 import java.util.ArrayList;
 
@@ -10,7 +11,7 @@ import static org.junit.Assert.assertEquals;
 
 public class MeleeTest {
 
-    Melee melee;
+   Melee melee;
 
     Item item;
 
@@ -21,7 +22,9 @@ public class MeleeTest {
         item = new Item("horn");
         ArrayList inventory = new ArrayList<>();
         inventory.add(item);
-        weapon =  new Weapon("Hammer", 20);
+
+        weapon = new Weapon("hammer", 20);
+
         melee = new Melee("Gimli", 100, inventory, 1, 150, weapon, 100);
     }
 
@@ -52,6 +55,7 @@ public class MeleeTest {
 
     @Test
     public void playerHasWeapon() {
+
         assertEquals(weapon, melee.getWeapon());
     }
 
