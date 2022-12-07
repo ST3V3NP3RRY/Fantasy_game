@@ -82,5 +82,15 @@ public class MeleeTest {
         assertEquals(75, melee.getHealth());
     }
 
-
+    @Test
+    public void playerIsAlive_false() {
+        melee.takeDamage(monster.getAttackStrength());
+        assertEquals(true, melee.isAlive());
+    }
+    @Test
+    public void playerIsAlive_true() {
+        Monster sauron = new Monster("Sauron", 200, 200, 200);
+        melee.takeDamage(sauron.getAttackStrength());
+        assertEquals(false, melee.isAlive());
+    }
 }

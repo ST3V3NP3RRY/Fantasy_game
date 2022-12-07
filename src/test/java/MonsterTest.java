@@ -54,4 +54,26 @@ public class MonsterTest {
     public void monsterHasDefence() {
         assertEquals(20, monster.getDefence());
     }
+    @Test
+    public void monsterCanAttack() {
+        monster.attack(melee);
+        assertEquals(110, melee.getHealth());
+    }
+
+    @Test
+    public void monsterCanTakeDamage() {
+        monster.takeDamage(melee.weapon.getDamage());
+        assertEquals(260, monster.getHealth());
+    }
+    @Test
+    public void monsterIsAlive_true() {
+        monster.takeDamage(melee.weapon.getDamage());
+        assertEquals(true, monster.isAlive());
+    }
+    @Test
+    public void monsterIsAlive_false() {
+        Monster troll = new Monster("troll", 35, 10, 60);
+        troll.takeDamage(melee.weapon.getDamage());
+        assertEquals(false, troll.isAlive());
+    }
 }

@@ -44,4 +44,8 @@ public class Monster implements IAttack, IDefend {
     public int takeDamage(int damage) {
         return this.health -= damage;
     }
+
+    public boolean isAlive() {
+        return this.health > 0 ? true : false;
+    }
 }

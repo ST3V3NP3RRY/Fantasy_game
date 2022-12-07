@@ -44,4 +44,7 @@ public class Melee extends Player implements IAttack, IDefend {
     public int takeDamage(int damage) {
         return health -= damage;
     }
+    public boolean isAlive() {
+        return this.health >= 0 ? true : false;
+    }
 }
