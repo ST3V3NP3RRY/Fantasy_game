@@ -1,11 +1,13 @@
 package player;
 
+import behaviours.IAttack;
+import behaviours.IDefend;
 import weapons.Weapon;
 import inventory.Item;
 
 import java.util.ArrayList;
 
-public class Melee extends Player {
+public class Melee extends Player implements IAttack, IDefend {
 
     public int strength;
 
@@ -34,5 +36,13 @@ public class Melee extends Player {
 
     public void setWeapon(Weapon weapon) {
         this.weapon = weapon;
+    }
+
+    public void attack(IDefend defender) {
+        defender.takeDamage(this.weapon.getDamage());
+    }
+
+    public int takeDamage(int damage) {
+        return 0;
     }
 }

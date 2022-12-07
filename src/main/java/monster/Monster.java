@@ -1,6 +1,9 @@
 package monster;
 
-public class Monster {
+import behaviours.IAttack;
+import behaviours.IDefend;
+
+public class Monster implements IAttack, IDefend {
 
     private String name;
 
@@ -31,5 +34,14 @@ public class Monster {
 
     public int getDefence() {
         return defence;
+    }
+
+
+    public void attack(IDefend defender) {
+        defender.takeDamage(this.attackStrength);
+    }
+
+    public int takeDamage(int damage) {
+        return this.health -= damage;
     }
 }

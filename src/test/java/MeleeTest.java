@@ -1,3 +1,4 @@
+import monster.Monster;
 import player.Melee;
 import weapons.Weapon;
 import inventory.Item;
@@ -16,15 +17,16 @@ public class MeleeTest {
 
     Weapon weapon;
 
+    Monster monster;
+
     @Before
     public void before() {
         item = new Item("horn");
         ArrayList inventory = new ArrayList<>();
         inventory.add(item);
-
         weapon = new Weapon("hammer", 20);
-
         melee = new Melee("Gimli", 100, inventory, 1, 150, weapon, 100);
+        monster = new Monster("Cave Troll", 150, 25, 20);
     }
 
     @Test
@@ -43,7 +45,7 @@ public class MeleeTest {
     }
 
     @Test
-    public void playerLevelHAsLevel() {
+    public void playerLevelHasLevel() {
         assertEquals(1, melee.getLevel());
     }
 
@@ -54,7 +56,6 @@ public class MeleeTest {
 
     @Test
     public void playerHasWeapon() {
-
         assertEquals(weapon, melee.getWeapon());
     }
 
@@ -65,6 +66,11 @@ public class MeleeTest {
         assertEquals(axe, melee.getWeapon());
     }
 
+    @Test
+    public void playerCanAttack() {
+        melee.attack(monster);
+        assertEquals(130, monster.getHealth());
+    }
     @Test
     public void playerHasArmour() {
         assertEquals(100, melee.getArmour());
