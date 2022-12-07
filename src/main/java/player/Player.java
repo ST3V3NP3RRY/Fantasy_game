@@ -5,10 +5,15 @@ import inventory.Item;
 import java.util.ArrayList;
 
 public abstract class Player {
+
     private String name;
+
     private int health;
+
     private ArrayList<Item> inventory;
+
     private int level;
+
 
     public Player(String name, int health, ArrayList<Item> inventory, int level) {
         this.name = name;
