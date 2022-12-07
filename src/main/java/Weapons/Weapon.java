@@ -1,9 +1,8 @@
-package Weapons;
+package weapons;
 
 public class Weapon {
 
     private String name;
-
 
     private int damage;
 
@@ -15,7 +14,6 @@ public class Weapon {
     public String getName() {
         return name;
     }
-
 
     public int getDamage() {
         return damage;
