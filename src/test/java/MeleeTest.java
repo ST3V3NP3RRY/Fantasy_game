@@ -1,4 +1,4 @@
-import Weapons.Weapon;
+import weapons.Weapon;
 import inventory.Item;
 import org.junit.Before;
 import org.junit.Test;
@@ -26,7 +26,7 @@ public class MeleeTest {
     }
 
     @Test
-    public void playerHasName(){
+    public void playerHasName() {
         assertEquals("Gimli", melee.getName());
     }
 
